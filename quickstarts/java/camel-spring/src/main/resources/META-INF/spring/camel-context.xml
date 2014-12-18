@@ -43,6 +43,14 @@
         </otherwise>
       </choice>
     </route>
+    <route id="get_stats_route">
+        <from uri="jetty:http://0.0.0.0:8080/get_stats_from_ghrc_data?matchOnUriPrefix=true"/>
+        <to uri="jetty:http://innovations.itsc.uah.edu/ghrcdashboard/get_stats_from_ghrc_data.php?bridgeEndpoint=true&amp;throwExceptionOnFailure=false"/>
+    </route>
+    <route id="get_archive_trends_route">
+        <from uri="jetty:http://0.0.0.0:8080/get_archive_trends_from_ghrc_data?matchOnUriPrefix=true"/>
+        <to uri="jetty:http://innovations.itsc.uah.edu/ghrcdashboard/get_archive_trends_from_ghrc_data.php?bridgeEndpoint=true&amp;throwExceptionOnFailure=false"/>
+    </route>
   </camelContext>
 
 </beans>
